@@ -1,13 +1,12 @@
 
- function genRandnum(){
-
-	 return Math.floor(Math.random()* 100 ) + 1;
-	}
-	var randNum = genRandnum();
-	var counter = 1;
-
-
 $(document).ready(function(){
+
+	 function genRandnum(){
+
+		 return Math.floor(Math.random()* 100 ) + 1;
+		}
+		var randNum = genRandnum();
+		var counter = 1;
 
 	$('#guessButton').click(function(){
 			event.preventDefault();
@@ -24,7 +23,7 @@ $(document).ready(function(){
         // viewing number of guesses
 				$('#count').html(counter++);
 				var spread =  Math.abs(randNum - guess);
-				
+
 				// hot and cold logic
 				console.log(spread);
 				if(spread >=60){
@@ -40,7 +39,7 @@ $(document).ready(function(){
 					$('#feedback').replaceWith("<h2 id='feedback'>may in Boston. nice breeze.</h2>");
 				}
 				else if(spread >=10){
-					$('#feedback').replaceWith("<h2 id='feedback'>june in Miami. litte uncomfortable.</h2>");
+					$('#feedback').replaceWith("<h2 id='feedback'>june in Miami. little too warm.</h2>");
 				}
 				else if(spread >=3){
 					$('#feedback').replaceWith("<h2 id='feedback'>july in Baton Rouge. heat stroke.</h2>");
