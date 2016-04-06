@@ -27,10 +27,10 @@ $(document).ready(function(){
 				// hot and cold logic
 				console.log(spread);
 				if(spread >=60){
-					$('#feedback').replaceWith("<h2 id='feedback'>polar tundra, ninny.</h2>");
+					$('#feedback').text("polar tundra, ninny.");
 				}
 				else if(spread >= 40){
-					$('#feedback').replaceWith("<h2 id='feedback'>january in Milwaulkee. my face hurts.</h2>");
+					$('#feedback').text("january in Milwaulkee. my face hurts.");
 				}
 				else if(spread >=25){
 					$('#feedback').replaceWith("<h2 id='feedback'>march in London. little chilly.</h2>");
@@ -63,10 +63,10 @@ $(document).ready(function(){
     			counter = 1;
 
 		//generate random number, again; otherwise it get's stuck
-				randNum = genRandnum();
-				console.log('new number that will be replaced ' + randNum);
+					randNum = genRandnum();
+					console.log('new number that will be replaced ' + randNum);
 
-	});
+			});
 
 	/*--- Display information modal box ---*/
  	$(".what").click(function(){
