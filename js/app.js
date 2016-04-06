@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 		$('.new').click(function(){
 					$('h2#feedback').replaceWith("<h2 id='feedback'>i am thinking of a number between 1 and 100. Can you guess it?</h2");
-					$('#guessList li').remove();
+					$('#guessList').html('');
 					$('#userGuess').val('');
 					$('#count').replaceWith("<span id='count'>0</span>");
 
