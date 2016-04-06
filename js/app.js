@@ -13,13 +13,12 @@ $(document).ready(function(){
 
     //no empty fields
 		var guess = $('#userGuess').val();
-		var originalGuess = guess;
 		$('#userGuess').val('');
 		guess = parseInt(guess);
 		console.log('Secret Random Number is ' + randNum +'.');
 
         //add guesses to list
-			if( 1 <= guess && guess <= 100 && Number.isInteger(originalGuess)) {
+			if( 1 <= guess && guess <= 100 ) {
 				$('#guessList').append("<li>"+guess+"</li>");
 				console.log(guess);
         // viewing number of guesses
