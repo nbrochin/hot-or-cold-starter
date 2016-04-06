@@ -13,6 +13,7 @@ $(document).ready(function(){
 
     //no empty fields
 		var guess = $('#userGuess').val();
+		$('#userGuess').val('');
 		guess = parseInt(guess);
 		console.log('Secret Random Number is ' + randNum +'.');
 
