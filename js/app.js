@@ -55,16 +55,16 @@ $(document).ready(function(){
 		});
 
 		$('.new').click(function(){
-		$('h2#feedback').replaceWith("<h2 id='feedback'>pick a number, any number (betwixt 1 and 100).</h2");
+		$('h2#feedback').replaceWith("<h2 id='feedback'>i am thinking of a number between 1 and 100. Can you guess it?</h2");
 		$('#guessList li').remove();
 		$('#userGuess').val('');
 		$('#count').replaceWith("<span id='count'>0</span>");
 
-    var counter = 1;
-
-		//generate random number, again; otherwise it get's stuck
-		var randNum = genRandnum();
-		console.log('new number that will be replaced ' + randNum);
+    // var counter = 1;
+		//
+		// //generate random number, again; otherwise it get's stuck
+		// var randNum = genRandnum();
+		// console.log('new number that will be replaced ' + randNum);
 
 	});
 
