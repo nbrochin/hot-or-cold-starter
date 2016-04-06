@@ -45,7 +45,7 @@ a {
 	color: black;
 }
 
-ul li {	
+ul li {
 	display: inline;
 }
 
@@ -145,7 +145,7 @@ h1 {
 
 .content > div ul li {
 	padding: 5px 0;
-	display: block;	
+	display: block;
 	list-style-type: disc;
 	line-height: 1.5em;
 }
@@ -209,7 +209,7 @@ h1 {
 }
 
 h2 {
-	margin: 0 auto;	
+	margin: 0 auto;
 	background: #cc324b;
 	padding: 1em 0.4em;
 	font-size: 1.5em;
@@ -221,6 +221,16 @@ h2 {
 	color: #fff;
 }
 
+h3 {
+	margin: 0 auto;
+	padding: 1em 0.4em;
+	font-size: 1.5em;
+	font-weight: 400;
+	display: block;
+	line-height: 1em;
+	color: #fff;
+}
+
 .game p {
 	margin-top: 0.5em;
 	font-size: 1.8em;
@@ -228,9 +238,9 @@ h2 {
 }
 
 #count {
-	color: #f39c12;
+	color: #cc324b;
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 input {
@@ -239,8 +249,8 @@ input {
 	display: block;
 	padding: 0.8em 0;
 	margin: 0.8em auto 0;
-	background: #50597b;
-	color: #fff;
+	background: #aaaaaa;
+	color: #555;
 	border: solid 1px #1f253d;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -252,21 +262,11 @@ input.button {
 	color: #95a5a6;
 	font-size: 2em;
 	padding: 0.2em;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
 }
 
 input.button:hover {
-	background: #e64c65;
-	color: #fff;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
+	background: #50597b;
+	color: #ccc;
 	cursor: pointer;
 }
 
@@ -278,22 +278,23 @@ input.text {
 
 input:focus {
 	outline: none !important;
+  opacity: 20%;
 }
 
 ::-webkit-input-placeholder {
-   color: #95a5a6;
+   color: transparent;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #95a5a6;
+   color: transparent;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #95a5a6; 
+   color: transparent;
 }
 
-:-ms-input-placeholder {  
-   color: #95a5a6; 
+:-ms-input-placeholder {
+   color: transparent;
 }
 
 ul.guessBox {
@@ -310,7 +311,7 @@ ul.guessBox {
 }
 ul.guessBox li {
 	display: inline;
-	background-color: #1a4e95;
+	background-color: #1F253D;
 	padding: 0.3em;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -319,3 +320,6 @@ ul.guessBox li {
 	margin: 0.2em;
 	color: #fff;
 }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
