@@ -57,17 +57,10 @@ $(document).ready(function(){
 				// hot and cold logic
 				console.log(spread);
 				if(spread >=60){
-<<<<<<< HEAD
-					$('#feedback').text("polar tundra, ninny.");
-				}
-				else if(spread >= 40){
-					$('#feedback').text("january in Milwaulkee. my face hurts.");
-=======
 					$('#feedback').replaceWith("<h2 id='feedback'>cold like the polar tundra (the coldest).</h2>");
 				}
 				else if(spread >= 40){
 					$('#feedback').replaceWith("<h2 id='feedback'>cold like january in cleveland. that's bad.</h2>");
->>>>>>> master
 				}
 				else if(spread >=25){
 					$('#feedback').replaceWith("<h2 id='feedback'>like london in march, you're a little chilly.</h2>");
@@ -91,7 +84,6 @@ $(document).ready(function(){
 		});
 
 		$('.new').click(function(){
-<<<<<<< HEAD
 					$('h2#feedback').replaceWith("<h2 id='feedback'>i am thinking of a number between 1 and 100. Can you guess it?</h2");
 					$('#guessList').html('');
 					$('#userGuess').val('');
@@ -102,18 +94,6 @@ $(document).ready(function(){
 		//generate random number, again; otherwise it get's stuck
 					randNum = genRandnum();
 					console.log('new number that will be replaced ' + randNum);
-=======
-		$('h2#feedback').replaceWith("<h2 id='feedback'>i am thinking of a number between 1 and 100. Can you guess it?</h2");
-		$('#guessList li').remove();
-		$('#userGuess').val('');
-		$('#count').replaceWith("<span id='count'>0</span>");
-
-    counter = 1;
-
-		//generate random number, again; otherwise it get's stuck
-		randNum = genRandnum();
-		console.log('new number that will be replaced ' + randNum);
->>>>>>> master
 
 			});
 
