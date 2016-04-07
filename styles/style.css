@@ -91,7 +91,7 @@ h1 {
 	width: 100%;
 	height: 100%;
 	color: #fff;
-	background: #e74c3c;
+	background: #cc324b;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -102,7 +102,7 @@ h1 {
 
 .content {
 	color: #fff;
-	background: #e74c3c;
+	background: #394264;
 	position: relative;
 	height: auto;
 	width: 600px;
@@ -170,7 +170,7 @@ h1 {
 .game {
 	position: relative;
 	background-color: #394264;
-	width: 380px;
+	width: 470px;
 	height: 380px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -238,9 +238,9 @@ h3 {
 }
 
 #count {
-	color: #cc324b;
+	color: #f9da17;
 	font-weight: 700;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 input {
@@ -250,7 +250,7 @@ input {
 	padding: 0.8em 0;
 	margin: 0.8em auto 0;
 	background: #aaaaaa;
-	color: #555;
+	color: #222;
 	border: solid 1px #1f253d;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -273,7 +273,22 @@ input.button:hover {
 input.text {
 	text-align: center;
 	padding: 0.2em;
-	font-size: 2em;
+	font-size: 1.5em;
+  font-weight: 600;
+}
+
+.form-control {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 input:focus {
@@ -300,7 +315,7 @@ input:focus {
 ul.guessBox {
 	height: 80px;
 	margin: 10px auto 0;
-	background: #11a8ab;
+	background: #fbfbfb;
 	padding: 0.5em;
 	display: block;
 	line-height: 2em;
