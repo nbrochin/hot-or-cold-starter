@@ -14,62 +14,90 @@ $(document).ready(function(){
     //no empty fields
 		var guess = $('#userGuess').val();
 		guess = parseInt(guess);
+		var spread =  Math.abs(randNum - guess);
 		console.log('Secret Random Number is ' + randNum +'.');
+		console.log('The spread is ' + spread +'.');
+		console.log(guess);
 
         //add guesses to list
-			if( 1 <= guess && guess <= 100 ) {
-				$('#guessList').append("<li>"+guess+"</li>");
-				console.log(guess);
+			if(spread >= 60 ) {
+				$('#guessList').append("<li style='background-color:#231b87;'>" + guess + "</li>");
+				}
+				else if(spread >=45){
+				$('#guessList').append("<li style='background-color:#195ba6;'>" + guess + "</li>");
+				}
+				else if(spread >=32){
+					$('#guessList').append("<li style='background-color:#19a4aa;'>" + guess + "</li>");
+				}
+				else if(spread >=24){
+					$('#guessList').append("<li style='background-color:#9fd219;'>" + guess + "</li>");
+				}
+				else if(spread >=16){
+					$('#guessList').append("<li style='background-color:#f9da17; color:#222222;'>" + guess + "</li>");
+				}
+				else if(spread >=9){
+					$('#guessList').append("<li style='background-color:#eb570f;'>" + guess + "</li>");
+				}
+				else if(spread >=5){
+					$('#guessList').append("<li style='background-color:#c12b68;'>" + guess + "</li>");
+				}
+				else if(spread >=1){
+					$('#guessList').append("<li style='background-color:#771423;'>" + guess + "</li>");
+				}
+				else if(spread == 0){
+					$('#guessList').append("<li style='background-color:#000000;'>" + guess + "</li>");
+				}
+
+
         // viewing number of guesses
 				$('#count').html(counter++);
-				var spread =  Math.abs(randNum - guess);
+				// spread =  Math.abs(randNum - guess);
 
 				// hot and cold logic
 				console.log(spread);
 				if(spread >=60){
-					$('#feedback').replaceWith("<h2 id='feedback'>polar tundra, ninny.</h2>");
+					$('#feedback').replaceWith("<h2 id='feedback'>cold like the polar tundra (the coldest).</h2>");
 				}
 				else if(spread >= 40){
-					$('#feedback').replaceWith("<h2 id='feedback'>january in Milwaulkee. my face hurts.</h2>");
+					$('#feedback').replaceWith("<h2 id='feedback'>cold like january in cleveland. that's bad.</h2>");
 				}
 				else if(spread >=25){
-					$('#feedback').replaceWith("<h2 id='feedback'>march in London. little chilly.</h2>");
+					$('#feedback').replaceWith("<h2 id='feedback'>like london in march, you're a little chilly.</h2>");
 				}
 				else if(spread >=17){
-					$('#feedback').replaceWith("<h2 id='feedback'>may in Boston. nice breeze.</h2>");
+					$('#feedback').replaceWith("<h2 id='feedback'>Ah. may in Boston. nice breeze.</h2>");
 				}
-				else if(spread >=10){
-					$('#feedback').replaceWith("<h2 id='feedback'>june in Miami. little too warm.</h2>");
+				else if(spread >=8){
+					$('#feedback').replaceWith("<h2 id='feedback'>Miami in june is uncomfortably warm.</h2>");
 				}
-				else if(spread >=3){
-					$('#feedback').replaceWith("<h2 id='feedback'>july in Baton Rouge. heat stroke.</h2>");
+				else if(spread >=1){
+					$('#feedback').replaceWith("<h2 id='feedback'>atlanta in july means, you are unavoidably hot.</h2>");
 				}
 				else if(spread === 0){
 					$('#feedback').replaceWith("<h2 id='feedback'>winner. winner. chicken dinner!!</h2>");
 				}
 
-			}
-			else{
-				alert('Please enter a number between 1 and 100');
-			}
+				else{
+					alert('Please enter a number between 1 and 100');
+				}
 		});
 
 		$('.new').click(function(){
-		$('h2#feedback').replaceWith("<h2 id='feedback'>pick a number, any number (betwixt 1 and 100).</h2");
+		$('h2#feedback').replaceWith("<h2 id='feedback'>i am thinking of a number between 1 and 100. Can you guess it?</h2");
 		$('#guessList li').remove();
 		$('#userGuess').val('');
 		$('#count').replaceWith("<span id='count'>0</span>");
 
-    var counter = 1;
+    counter = 1;
 
 		//generate random number, again; otherwise it get's stuck
-		var randNum = genRandnum();
+		randNum = genRandnum();
 		console.log('new number that will be replaced ' + randNum);
 
 	});
 
 	/*--- Display information modal box ---*/
- 	$(".what").click(function(){
+ 		$(".what").click(function(){
    	$(".overlay").fadeIn(1000);
 
   	});
