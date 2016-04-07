@@ -151,7 +151,8 @@ h1 {
 }
 
 .content > div ul li strong{
-	text-decoration: underline;
+	text-decoration: none;
+  color: #f9da17;
 }
 
 .content > div a {
